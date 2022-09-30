@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat&display=swap');
+*{
+   box-sizing: border-box;
+   margin: 0; 
+   padding: 0;
+   background-color: #FFFFFF;
+}
+li, a, button{
+    font-family: "Aldrich", sans-serif;
+    font-size: 20px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+.title{
+    cursor: pointer;
+}
+.nav__content{
+    list-style: none;
+}
+.nav__content li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: #7D0A0A;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0.3s;
+}
+button:hover{
+    background-color: #edf0f1;
+    color: #7D0A0A;
+}
