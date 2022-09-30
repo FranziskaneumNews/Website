@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
 *{
    box-sizing: border-box;
    margin: 0; 
    padding: 0;
-   background-color: #FFFFFF;
 }
 li, a, button{
     font-family: "Aldrich", sans-serif;
@@ -13,6 +12,9 @@ li, a, button{
 }
 
 header{
+    background-color: #8b8b8b;
+    font-family: "Aldrich", sans-serif;
+    font-size: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,9 +22,11 @@ header{
 }
 .title{
     cursor: pointer;
+    background: none;
 }
 .nav__content{
     list-style: none;
+    background: none;
 }
 .nav__content li{
     display: inline-block;
@@ -33,11 +37,12 @@ button{
     padding: 9px 25px;
     background-color: #7D0A0A;
     border: none;
-    border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease 0.3s;
+    transition: all 250ms ease;
 }
+
 button:hover{
-    background-color: #edf0f1;
-    color: #7D0A0A;
+    background-color: #7d0a0a80;
+    border-radius: 15px;
+    box-shadow: inset 0 0 0 3px #7D0A0A;
 }
