@@ -6,4 +6,4 @@ This projects generates the HTML for the website using .MD Files.
 
 1. Clone the repository
 2. Clone the News repository into news/
-2. Run using `deno run --allow-read --allow-write --allow-net index.ts`
+2. Run using `deno run -A index.ts`

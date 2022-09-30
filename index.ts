@@ -2,9 +2,11 @@ import generate from './generator.ts'
 
 function readDir(dir: string) {
     try {
-        for (const dirEntry of Deno.readDirSync("news")) {
+        for (const dirEntry of Deno.readDirSync(dir)) {
             if (dirEntry.isFile) {
-                generate(dirEntry.name);
+                if (dirEntry.name.endsWith('.md')) {
+                    generate(`${dir}/${dirEntry.name}`);
+                }
             } else if (dirEntry.isDirectory) {
                 readDir(`${dir}/${dirEntry.name}`);
             }
@@ -17,4 +19,12 @@ function readDir(dir: string) {
     }
 }
 
-readDir("news");
+for (const file of Deno.readDirSync('template')) {
+    if (file.isFile && file.name.endsWith('.css')) {
+        Deno.copyFileSync(`template/${file.name}`, `html/${file.name}`);
+    }
+}
+
+// TODO: Auto Downlaod News Repo
+
+readDir("news/articles");
